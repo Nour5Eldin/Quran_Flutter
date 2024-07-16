@@ -46,8 +46,15 @@ class _QuranPageState extends State<QuranPage> {
     return Scaffold(
       backgroundColor: quranPagesColor,
       appBar: AppBar(
-        title: const Text("سور القرآن الكريم",
-            textDirection: TextDirection.rtl, textAlign: TextAlign.right),
+        flexibleSpace: FlexibleSpaceBar(
+          centerTitle: true,
+          title: Text(
+            "سور القرآن الكريم",
+            textDirection: TextDirection.rtl,
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black),
+          ),
+        ),
         backgroundColor: const Color(0xffF1EEE5),
       ),
       body: isLoading
